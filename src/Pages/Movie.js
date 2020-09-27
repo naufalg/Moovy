@@ -34,13 +34,10 @@ export default function Movie(props) {
 
   return (
     <Content style={{ padding: "0 50px" }}>
-      {/* <Breadcrumb style={{ margin: "16px 0" }}>
-        <Link to="/">
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
-        </Link>
-        <Breadcrumb.Item>Now Playing</Breadcrumb.Item>
+      <Breadcrumb style={{ margin: "16px 0" }}>
+        <Breadcrumb.Item>Movie</Breadcrumb.Item>
         <Breadcrumb.Item>{detailMovieData.title}</Breadcrumb.Item>
-      </Breadcrumb> */}
+      </Breadcrumb>
       <div className="site-layout-content">
         {detailMovieData !== undefined ? (
           <div>

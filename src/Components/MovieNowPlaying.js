@@ -31,6 +31,11 @@ export default function Home() {
 
   return (
     <div>
+      {/* <Breadcrumb style={{ margin: "16px 0" }}>
+        <Breadcrumb.Item>Home</Breadcrumb.Item>
+        <Breadcrumb.Item>Now Playing</Breadcrumb.Item>
+      </Breadcrumb> */}
+
       <h2>Now Playing</h2>
       <Row gutter={[24, 24]}>
         {dataMovie !== undefined ? (

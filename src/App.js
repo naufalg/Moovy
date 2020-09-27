@@ -6,6 +6,7 @@ import "./App.css";
 // pages
 import Home from "./Pages/Home";
 import Movie from "./Pages/Movie";
+import UpcomingMovie from "./Pages/UpcomingMovie";
 // antd
 import { Layout, Menu, Breadcrumb } from "antd";
 import AntdHeader from "./Components/WebElements/AntdHeader";
@@ -22,7 +23,10 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route Movie path="/Movie/:id">
+          <Route exact path="/UpcomingMovie">
+            <UpcomingMovie />
+          </Route>
+          <Route exact path="/Movie/:id">
             <Movie />
           </Route>
         </Switch>
