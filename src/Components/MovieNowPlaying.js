@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 // redux
 import { useSelector, useDispatch } from "react-redux";
 import { getDataActions } from "../redux/action/getMovieData.action";
 
 // antd
-import { Card } from "antd";
+import { Card, Skeleton } from "antd";
 import { Row, Col, Divider } from "antd";
 
 const { Meta } = Card;
@@ -21,6 +22,9 @@ export default function Home() {
     (state) => state.getMovieDataReducer.data.results
   );
   console.log("dataMovie", dataMovie);
+
+  const history = useHistory();
+  console.log("history", history);
 
   //   image url
   const posterUrl = "https://image.tmdb.org/t/p/w500";
@@ -38,6 +42,9 @@ export default function Home() {
                 cover={
                   <img alt="example" src={`${posterUrl}${item.poster_path}`} />
                 }
+                onClick={() => {
+                  history.push(`Movie/${item.id}`);
+                }}
               >
                 <Meta
                   title={item.title}
@@ -48,7 +55,7 @@ export default function Home() {
             </Col>
           ))
         ) : (
-          <p>sabar ya</p>
+          <Skeleton active />
         )}
       </Row>
     </div>

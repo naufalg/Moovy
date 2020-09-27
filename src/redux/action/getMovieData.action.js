@@ -27,7 +27,8 @@ export function getDataActions() {
   return function (dispatch) {
     dispatch(getDataRequest());
     // nowPlaying api url
-    const url1 = "https://api.themoviedb.org/3/movie/now_playing?api_key=bbdca136fa897a6acf7dc8eed68a4c64";
+    const api_key = process.env.REACT_APP_TMDB_API_KEY
+    const url1 = `https://api.themoviedb.org/3/movie/now_playing?api_key=${api_key}`;
     axios
       .get(url1)
       .then((result) => dispatch(getDataSuccess(result.data)))

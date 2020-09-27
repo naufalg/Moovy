@@ -5,15 +5,31 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 // pages
 import Home from "./Pages/Home";
+import Movie from "./Pages/Movie";
+// antd
+import { Layout, Menu, Breadcrumb } from "antd";
+import AntdHeader from "./Components/WebElements/AntdHeader";
+
+const { Header, Content, Footer } = Layout;
 
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-      </Switch>
+      <Layout className="layout">
+        <AntdHeader />
+
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route Movie path="/Movie/:id">
+            <Movie />
+          </Route>
+        </Switch>
+        <Footer style={{ textAlign: "center" }}>
+          naufalg ©2020 powered by antd
+        </Footer>
+      </Layout>
     </Router>
   );
 }
