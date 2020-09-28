@@ -8,18 +8,18 @@ const { Header, Content, Footer } = Layout;
 
 export default function AntdHeader() {
   return (
-    <Header>
+    <Header className="header header-font">
       <Link to ="/">
         <img src={moovyLogo} className="logo" alt="Moovy-Logo" />
       </Link>
-      <Menu theme="dark" mode="horizontal" 
+      <Menu className="header header-font" theme="dark" mode="horizontal" 
       defaultSelectedKeys={["1"]}
       >
         <Menu.Item key="1">
           <Link to="/">Now Playing</Link>
         </Menu.Item>
         <Menu.Item key="2">
-          <Link to="/UpcomingMovie">Upcoming</Link>
+          <Link to="/upcoming-movie">Upcoming</Link>
         </Menu.Item>
         {/* <Menu.Item key="2">nav 2</Menu.Item>
         <Menu.Item key="3">nav 3</Menu.Item> */}

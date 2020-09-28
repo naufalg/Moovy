@@ -48,7 +48,7 @@ export default function Home() {
                   <img alt="example" src={`${posterUrl}${item.poster_path}`} />
                 }
                 onClick={() => {
-                  history.push(`Movie/${item.id}`);
+                  history.push(`movie/${item.id}`);
                 }}
               >
                 <Meta

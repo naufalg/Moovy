@@ -54,7 +54,7 @@ export default function UpcomingMovie() {
                     />
                   }
                   onClick={() => {
-                    history.push(`Movie/${item.id}`);
+                    history.push(`movie/${item.id}`);
                   }}
                 >
                   <Meta

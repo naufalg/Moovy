@@ -2,7 +2,7 @@ import React from "react";
 // routerDom
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // css
-import "./App.css";
+import "./App.scss";
 // pages
 import Home from "./Pages/Home";
 import Movie from "./Pages/Movie";
@@ -23,10 +23,10 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/UpcomingMovie">
+          <Route exact path="/upcoming-movie">
             <UpcomingMovie />
           </Route>
-          <Route exact path="/Movie/:id">
+          <Route exact path="/movie/:id">
             <Movie />
           </Route>
         </Switch>

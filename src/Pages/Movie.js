@@ -26,6 +26,18 @@ export default function Movie(props) {
     (state) => state.getDetailMovieReducer.data
   );
   const companyData = detailMovieData.production_companies;
+  const genreData = detailMovieData.genres;
+  let genreArray = [];
+
+  if (genreData !== undefined) {
+    genreData.map((item) => genreArray.push(item.name));
+  }
+
+  let genreText = genreArray.join(", ")
+
+  console.log("genreArray", genreArray);
+  console.log("genreText", genreText);
+
   console.log("detailMovieData", detailMovieData);
   //   detailMovieData !== undefined
   //     ? console.log("detailMovieData", detailMovieData)
@@ -53,7 +65,7 @@ export default function Movie(props) {
               // }
             />
             <Divider />
-
+            <h3>Genre: {genreText} </h3>
             <h3>Rating: {detailMovieData.vote_average}/10</h3>
             <h3>Release date: {detailMovieData.release_date}</h3>
             {/* <h3>
